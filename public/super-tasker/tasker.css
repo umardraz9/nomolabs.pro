@@ -255,3 +255,49 @@
 .phone-showcase .screen img{height:100%;object-fit:contain}
 .phone-showcase .carousel-stage:focus-visible{outline:2px solid #1689fe;outline-offset:4px}
 @media(max-width:380px){.phone-showcase .dots{gap:5px;padding-inline:3px}.phone-showcase .carousel-controls{gap:3px}}
+
+/* Match the carousel to the surrounding Super Tasker sections. */
+.phone-showcase {
+  min-height: auto;
+  padding: clamp(48px, 7vw, 100px) 16px;
+  background: radial-gradient(ellipse at 50% 48%, #25495970, transparent 65%), #0a1a24;
+  color: var(--ink);
+}
+.phone-showcase .carousel-heading p { color: var(--gold); }
+.phone-showcase h2 { color: var(--ink); }
+.phone-showcase h2 em { color: var(--gold); }
+.phone-showcase .carousel-caption { color: var(--muted); }
+.phone-showcase .phone {
+  border-color: #84999b;
+  box-shadow: 0 30px 58px #0008, 0 5px 12px #0006, inset 0 0 0 1px #ffffff29;
+}
+.phone-showcase .carousel-controls {
+  border-color: var(--line);
+  background: #16313de8;
+  box-shadow: 0 9px 28px #0004;
+}
+.phone-showcase .carousel-controls > button {
+  background: #264452;
+  color: var(--ink);
+}
+.phone-showcase .carousel-controls > button:hover { background: #3b5965; }
+.phone-showcase .dots button { background: #8ba0a7; }
+.phone-showcase .dots button.selected { background: var(--gold); }
+.phone-showcase button:focus-visible,
+.phone-showcase .carousel-stage:focus-visible {
+  outline-color: var(--gold);
+}
+@media (max-width: 520px) {
+  .phone-showcase { padding: 48px 8px; }
+  .phone-showcase .carousel-stage { height: 490px; min-height: 0; }
+  .phone-showcase .phone { height: 450px; }
+  .phone-showcase .carousel-heading { padding-inline: 16px; }
+}
+@media (max-width: 380px) {
+  .phone-showcase .carousel-controls { gap: 2px; }
+  .phone-showcase .dots { gap: 4px; padding-inline: 3px; }
+}
+@media (max-height: 650px) and (min-width: 521px) {
+  .phone-showcase .carousel-stage { height: 430px; min-height: 0; }
+  .phone-showcase .phone { height: 410px; }
+}
