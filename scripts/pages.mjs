@@ -24,6 +24,5 @@ head=head.replace(/<title>.*?<\/title>/,`<title>${p.title}</title>`).replace(/<m
 const activeHeader=header.replace(`href="/${slug}/"`,`href="/${slug}/" aria-current="page"`);
 await mkdir(`public/${slug}`,{recursive:true});await writeFile(`public/${slug}/index.html`,`<!doctype html><html lang="en">${head}<body class="inner-page ${slug}-page"><a class="skip" href="#main">Skip to content</a>${activeHeader}<main id="main">${p.body}</main>${footer}</body></html>`);
 }
-await writeFile('public/sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${['','about/','team/','contact/'].map(s=>`<url><loc>https://nomolabs.pro/${s}</loc></url>`).join('')}</urlset>`);
-let config=JSON.parse(await readFile('caravan-config.json','utf8'));config.supportEmail=email;await writeFile('caravan-config.json',JSON.stringify(config,null,2)+'\n');
+await writeFile('public/sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${['','about/','team/','contact/','super-tasker/'].map(s=>`<url><loc>https://nomolabs.pro/${s}</loc></url>`).join('')}</urlset>`);
 console.log('Updated navigation and built About, Team and Contact pages.');
