@@ -1,0 +1,21 @@
+.vercel/
+.env*
+dist/
+
+# Local browser and responsive QA captures
+/about-*.png
+/caravan-*.png
+/contact-*.png
+/desktop-preview.png
+/footer-*.png
+/mobile-preview.png
+/qa-*.png
+/reference-home.png
+/refined-*.png
+/team-*.png
+
+# Generated local deployment and image indexes
+/caravan-config.json
+/deploy-manifest.json
+/generated-contact-*.jpg
+/generated-image-index.json
